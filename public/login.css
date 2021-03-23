@@ -1,0 +1,27 @@
+#container{
+    width: 500px;
+    margin: 0 auto
+}
+ .navbar-brand{
+    width: 200px;
+    margin: 0 auto;
+    background-color :rgba(205, 223, 233, 0.979);
+    border-radius: 25pc;
+    text-align: center;
+}
+.align-form{
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+body{
+  
+    
+    background-image : url('/image/shop3.gif');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color:rgb(229, 226, 226);
+    background-size: 35%;
+}
+ 

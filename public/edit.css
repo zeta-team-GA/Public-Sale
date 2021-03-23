@@ -1,0 +1,33 @@
+body{
+  
+    background-image : url('/image/shop3.gif');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: rgb(229, 229, 226);
+    background-size: 35%;
+   
+   /* background-image: radial-gradient(farthest-corner , #b8c9dd 0%, #090a0f 100%);*/
+     
+     color: rgb(146, 145, 143);
+ 
+ 
+ }
+ .navbar-brand{
+    width: 200px;
+    margin: 0 auto;
+    background-color :rgba(205, 223, 233, 0.979);
+    border-radius: 25pc;
+    text-align: center;
+}
+a.btn.btn-primary{
+    background-color:rgb(217, 225, 230);
+    border-radius: 25px;
+    border:none;
+    }
+       
+    .btn.btn-primary{
+        color:black;
+        background-color:rgb(217, 225, 230);
+        border-radius: 25px;
+        border:none;
+    }

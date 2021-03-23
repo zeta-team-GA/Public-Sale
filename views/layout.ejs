@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" type="text/css" href="/nav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <%=checklogin%>
+    <!-- Start nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #d1d1d1; position:fixed; overflow: hidden;top: 0;width: 100%; z-index: 1;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: #225ed7; font-weight: bold ;">Public Sale</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Start ul -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- Start li 1-->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <!-- Start li 2-->
+              <%if(!checklogin){%>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">SignIn</a>
+              </li>
+              <%}else{%>
+                 <!-- Start li 3-->
+              <li class="nav-item">
+                <a class="nav-link" href="/profile">Profile</a>
+              </li>
+              <!-- Start li 4-->
+              <li class="nav-item">
+                <a id="logout" class="nav-link" href="/logout">Logout</a>
+              </li>
+              <%}%>
+            </ul>
+          
+            <!-- End ul -->
+            </div>
+        </div>
+    </nav>
+    <!-- End nav-->
+    <%- body %>
+    <script type="text/javascript" src="flash/flash-client.js"></script> 
+    
+</body>
+</html>

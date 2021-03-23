@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-layout": "^0.1.0",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.9.0",
+    "flash": "^1.1.0",
+    "flash-express": "^1.0.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.9"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "project-2",
+  "description": "### Introduction:",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/Team-Zeta/project-2.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

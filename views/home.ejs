@@ -1,0 +1,54 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/home.css">
+  
+</head>
+<body>
+<header></header>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div class='welcome' >
+<h1>Welcome to Public Sale Website</h1>
+</div>
+
+<div class='headline' >
+  <h3>_______________ All Products _______________</h3>
+  </div>
+
+
+
+<div class='product' id="container">
+
+
+  <div class="row row-cols-3 row-cols-md-2 g-4">
+      <% userProduct.forEach((user,i)=>{ %>
+        <%user.products.forEach((ele,i)=>{%>
+        <div class="col col-md-3">
+          
+          <div class="card h-100">
+            <img src="<%=ele.image%>" class="card-img-top height-img" alt="...">
+            <div class="card-body">
+              <h4 class="card-title"><%=ele.name%></h4>
+              <p class="card-discription" style="font-weight: bold;">discription: <%=ele.discription%></p>
+              <p class="card-price" style="font-weight: bold">Price: <%=ele.price%></p>
+
+              <!-- user info -->
+              <p class="card-fullName"style="font-weight: bold">Owner: <%=user.fullName%></p>
+              <h6 style="font-weight: bold; background-color:  rgb(229, 229, 226);">Contact Info</h6>
+              <p class="card-fullName" style="font-weight: bold">Email: <%=user.email%></p>
+              <p class="card-fullName" style="font-weight: bold">Number: <%=user.phoneNumber%></p>
+            </div>
+          </div>
+          
+        </div>
+        <% }) %>
+        <% }) %>
+    </div> 
+</div>
+<footer></footer>
+</body>
+

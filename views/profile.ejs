@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/home.css">
+    <link rel="stylesheet" type="text/css" href="/profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+<body>
+<!-- <a href="/logout" class="btn btn-default">Log Out</a> -->
+<% if (user && user.email) { %>
+  <div class="container">
+      <div class="container-content widthInfo">
+        <div class="info" id="profile-info">
+
+          <form action="/updateUser/<%=user._id %>?_method=PUT" method="POST" class="info">
+            <label for="name" class="form-label">Full Name:</label>
+              <input type="text" name="name" class="form-control" id="name" value="<%= user.fullName %>" readonly>
+              <label for="email" class="form-label">Email:</label>
+              <input type="text" name="email" class="form-control" id="email" value="<%= user.email %>" readonly>
+              <label for="phoneNumber" class="form-label">Phone Number:</label>
+              <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" value="<%= user.phoneNumber %>" readonly>
+             <br>
+              <button type="submit"  id="submitBtn" class="btn btn-primary" >accept changes</button>
+            </form>
+            <br><br>
+            <a id="btnEdit"  class="btn btn-primary">Edit Profile Info</a>
+            <br><br>
+            <a href="/product" class="btn btn-primary">Add Product</a>
+            <br><br>
+            <a href="/updatePassword/:id/edit" class="btn btn-primary">Change Password</a>
+        </div>
+
+
+        </div>
+
+        <div>
+          <div class="container-content widthProduct">
+            <div class="row row-cols-2 row-cols-md-2 g-4 paddingProduct">
+            <!-- <div class="right"> -->
+              <% user.products.forEach((ele,i)=>{ %>
+                <div class="col card-margin">
+                  <div class="card h-100 card-border">
+                    <img src="<%=ele.image%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><%=ele.name%></h3>
+                      <p class="card-discription"><strong> Discription: </strong><%=ele.discription%></p>
+                      <p class="card-features"><strong>Features: </strong><%=ele.features%></p>
+                      <p class="card-price"><strong>Price: </strong><%=ele.price%></p>
+                     
+                      <a href="/update/<%=ele._id %>/edit" class="btn btn-primary">Edit</a>
+                      
+                      <form action="/delete/<%=ele._id %>?_method=DELETE" method="POST">
+                        <input class="btn btn-primary" type="submit" value="DELETE" />
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+                <% }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <% } else { %>
+    <div class="errorLogin"> 
+   <h2> You're not logged in. </h2>
+    <a href="/login">Log in</a> </div>
+  <% } %>
+
+
+  <script>
+    $('#submitBtn').css("visibility", "hidden");
+ $('#btnEdit').click(function()
+  {
+   console.log("hi")
+    $("input[name='name']").removeAttr("readonly");
+    $("input[name='email']").removeAttr("readonly");  
+    $("input[name='phoneNumber']").removeAttr("readonly");
+    $('#submitBtn').css("visibility", "visible");
+ });
+ </script>
+ <script type="text/javascript" src="flash/flash-client.js"></script>
+</body>

@@ -1,0 +1,81 @@
+.container{
+    display:flex;
+}
+.container-content{
+    flex-direction: row;
+    
+}
+.widthInfo{
+    width:50%;
+    padding-top: 500px;
+}
+.paddingProduct{
+    padding-left: 50px;
+    padding-top: 100px;
+    
+}
+
+/* .info{
+    
+} */
+/* .right{
+    display:flex;
+} */
+
+/* .card-margin{
+    padding: 10px;
+    
+    
+} */
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 23px;
+
+}
+
+.card-img-top{
+    width: 90%;
+    padding: 7px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    margin-top: 25px;
+} 
+
+/* .editDeleteBtn{
+    display: inline;
+} */
+
+.errorLogin{
+    text-align: center;
+    padding-top:130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* class = col-sm-3  row row-cols-1 row-cols-md-4 g-4*/
+
+
+
+
+
+

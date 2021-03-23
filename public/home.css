@@ -1,0 +1,139 @@
+.navbar-brand{
+    width: 200px;
+    margin: 0 auto;
+    background-color :rgba(205, 223, 233, 0.979);
+    border-radius: 25pc;
+    text-align: center;
+}
+#singUp,#logIn{
+
+    background-color :rgba(205, 223, 233, 0.979);
+    width: 90px;
+    border: none;
+    border-radius: 25pc;
+    color:black;
+}
+
+
+body{
+  
+    background-image : url('/image/shop3.gif');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: rgb(229, 229, 226);
+    background-size: 35%;
+   
+   /* background-image: radial-gradient(farthest-corner , #b8c9dd 0%, #090a0f 100%);*/
+     
+     color: rgb(146, 145, 143);
+ 
+ 
+ }
+
+ .welcome{
+   text-align: center; 
+   margin-top: -130px;
+   color: rgba(0, 0, 255, 0.842);
+    
+ }
+
+ .headline{
+    text-align: center;
+    padding-top: 300px;
+
+ }
+#container{
+    width: 90%;
+    margin: 0 auto;
+
+    padding-top: 40px;
+}
+
+.col-sm-3{
+   
+    width: 800px;
+    display: grid;
+    grid-template-rows: 100px 1fr ;
+    margin:80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color:rgb(228, 226, 228);
+    color:black;
+}
+/* #profile-info{
+    background-color:burlywood;
+    margin-top: 48px;
+    border-right: 2px solid black;
+} */
+
+.card-body, .card-img-top{
+
+    border-radius: 25px;
+   
+}
+a.btn.btn-primary{
+background-color:rgb(217, 225, 230);
+border-radius: 25px;
+border:none;
+}
+   
+.btn.btn-primary{
+    color:black;
+    background-color:rgb(217, 225, 230);
+    border-radius: 25px;
+    border:none;
+}
+.col-sm-9{
+   
+    width: 800px;
+    display: grid;
+    grid-template-rows: 100px 1fr ;
+    margin:80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color:rgb(229, 226, 226);
+    color:black;
+    opacity: 0.6;}
+
+
+    .profileTextField{
+      width: 30%;
+    }
+    
+    
+.height-img{
+    height: 400px;
+
+}
+.card-img-top{
+    width: 90%;
+    padding: 7px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+} 
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 23px;
+
+}
+
+.card-body{
+    color:black
+}
+
+.card-title{
+    text-align: center;
+    background-color:  rgb(229, 229, 226);
+}
+
+
+
